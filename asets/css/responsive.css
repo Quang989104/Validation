@@ -1,0 +1,59 @@
+@media(min-width: 740px) and (max-width: 1023px) {
+	.container {
+		min-width: 500px;
+	}
+	
+	.heading {
+		font-size: 30px;
+	}
+
+	.desc {
+		font-size: 18px;
+	}
+	.form-label {
+    		font-size: 18px;
+	}
+
+	.form-group > input {
+    		padding: 15px;
+		font-size: 17px;
+	}
+
+
+	.sub-btn {
+    		padding: 18px;
+    		font-size: 18px;
+	}
+}
+
+@media(max-width: 739px) {
+	.main {
+    		top: 0;
+    		left: 0;
+    		transform: none;
+	}
+
+	.form-label {
+    		font-size: 18px;
+	}
+
+	.form-group > input {
+    		padding: 16px;
+    		width: 100%;
+    		border: 1px solid #ccc;
+		font-size: 17px;
+	}
+
+	.form-group {
+    		margin: 0 30px;
+	}
+
+	.sub-btn {
+    		padding: 18px;
+    		font-size: 18px;
+	}
+
+	.container {
+    		border: none;
+	}
+}

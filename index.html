@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./asets/css/style.css">
+	<link rel="stylesheet" href="./asets/css/responsive.css">
+	<title>Đăng nhập</title>
+</head>
+<body>
+	<div class="main">
+		<div class="container">
+			<div class="header">
+				<h2 class="heading">Đăng nhập</h2>
+				<p class="desc">thông tin đăng nhập</p>
+			</div>
+	
+			<div class="body">
+				<form action="" id="form-1">
+					<div class="form-group">
+							<label for="full-name" class="form-label">Name</label>
+							<input type="text" id="full-name" name="name" placeholder="Họ và Tên">
+							<span class="form-message"></span>
+					</div>
+		
+					<div class="form-group">
+						<label for="email" class="form-label">Email</label>
+						<input type="email" id="email" name="email" placeholder="vd: Quang98912004@gmail.com">
+						<span class="form-message"></span>
+					</div>
+		
+					<div class="form-group">
+						<label for="passwword" class="form-label">Mật khẩu</label>
+						<input type="password" id="password" name="password" placeholder="nhập mật khẩu">
+						<span class="form-message"></span>
+					</div>
+		
+					<div class="form-group">
+						<label for="again-passwword" class="form-label">Nhập lại mật khẩu</label>
+						<input type="password" id="again-password" name="again-password" placeholder="Nhập lại mật khẩu">
+						<span class="form-message"></span>
+					</div>
+	
+					<button class="sub-btn">Đăng nhập</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="code.js"></script>
+	<script>
+		validator({
+			form: '#form-1',
+			formMessage: '.form-message',
+			rules: [
+				isRequired('#full-name'),
+				isRequired('#email'),
+				isEmail('#email'),
+				minLength('#password',8),
+				isRequired('#again-password'),
+				isConfirmed('#again-password',function() {
+					return document.querySelector('#password').value
+				})
+			],
+			isData: function(data) {
+				console.log(data)
+			},
+			formGroup: '.form-group'
+		})
+	</script>
+</body>
+</html>
