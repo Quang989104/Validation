@@ -64,6 +64,9 @@ body {
     float: right;
 }
 
+.sub-btn:hover {
+	cursor: pointer;
+
 .invalid {
 	color: red;
 }
