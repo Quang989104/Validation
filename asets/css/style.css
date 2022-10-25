@@ -62,10 +62,8 @@ body {
     padding: 8px;
     margin: 20px;
     float: right;
+    cursor: pointer;
 }
-
-.sub-btn:hover {
-	cursor: pointer;
 
 .invalid {
 	color: red;
